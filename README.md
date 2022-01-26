@@ -41,7 +41,7 @@ absol_risk
 #>        D    561       306       790
 ```
 
-Create a vector comprising the baseline risk and followed by the absolute risks as they appear in `absol_risk`.
+Create a vector comprising the baseline risk, followed by the absolute risks as they appear in `absol_risk`.
 
 ``` r
 (absol_risk_new <- c(0.80, round(absol_risk[, 2]/1000, 2)))
