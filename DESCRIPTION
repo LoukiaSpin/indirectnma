@@ -1,0 +1,24 @@
+Type: Package
+Package: indirectnma
+Title: Indirect Absolute Effects 
+Version: 0.1.0
+Authors@R: c(
+    person("Loukia", "Spineli", email = "Spineli.Loukia@mh-hannover.de", 
+    role = c("aut", "cre"))
+  )
+Maintainer: Loukia Spineli <Spineli.Loukia@mh-hannover.de>
+Description: Obtain indirect absolute effects using the GRADE approach for 
+    binary outcomes (Guyatt et al., 2013), the transitive risks framework 
+    (Spineli et al., 2017), and the back-calculation method (Dias et al., 2010).
+License: GPL (>= 3) 
+URL: https://github.com/LoukiaSpin/indirectnma
+Depends: 
+    R (>= 4.0.0)
+Suggests: 
+    rmarkdown
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+RoxygenNote: 7.1.2
