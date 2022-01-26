@@ -34,6 +34,10 @@ absol_risk <- absolute_risk(data = ears[1:3, c("experimental", "nma_or", "nma_lo
                             measure = "OR", 
                             log = FALSE)
 absol_risk
+#> versus A nma_or nma_lower nma_upper
+#>        B    432       219       658
+#>        C    706       468       865
+#>        D    561       306       790
 ```
 
 Create a vector comprising the baseline risk and followed by the absolute risks as they appear in `absol_risk`. Note that `absol_risk` returns the absolute risks per 1,000 participants.
