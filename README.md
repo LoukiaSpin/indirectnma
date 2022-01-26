@@ -28,7 +28,7 @@ Use the `absolute_risk` function to calculate the unique absolute risks for the 
 ``` r
 source("./R/obtain.absolute.risks_function.R")
 
-abs_risk0 <- absolute_risk(data = ears[1:3, c(1, 3:5)], 
+abs_risk0 <- absolute_risk(data = ears[1:3, c("experimental", "nma_or", "nma_lower", "nma_upper")], 
                            ref = "A", 
                            base_risk = 0.80, 
                            measure = "OR", 
