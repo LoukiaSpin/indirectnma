@@ -1,9 +1,8 @@
 # Indirect absolute effects 
-An R function to yield indirect absolute effects using the **GRADE approach** for absolute effects (Guyatt et al., 2013), the **transitive risks** framework (Spineli et al., 2017), and the **back-calculation method** (Dias et al., 2010). This is a four-stage approach:
+An R function to yield indirect absolute effects using the **GRADE approach** for binary outcomes (Guyatt et al., 2013), the **transitive risks** framework (Spineli et al., 2017), and the **back-calculation method** (Dias et al., 2010). This is a three-stage approach:
 
-- firstly, the absolute risks for all interventions of the network are obtained using the GRADE approach for absolute effects (Guyatt et al., 2013), and the transitive risks framework (Spineli et al., 2017);
-- secondly, the baseline and absolute risks from the first stage are incorporated in the formula to obtain the direct and network meta-analysis relative risks (see Guyatt et al. 2013);
-- thirdly, we use the formula described in Walter (2000) to obtain the direct and network meta-analysis absolute effects as a function of the absolute risks and the relative risks (see Appendix in Walter (2000));
+- firstly, the absolute risks for all interventions of the network are obtained using the GRADE approach for binary outcomes (Guyatt et al., 2013), and the transitive risks framework (Spineli et al., 2017);
+- secondly, the baseline and absolute risks from the first stage are incorporated in the formula to obtain the direct and network meta-analysis absolute effects (see Guyatt et al. 2013);
 - finally, the back-calculation approach is employed to obtain the indirect absolute effects (Dias et al., 2010).
 
 ## Installation
@@ -113,5 +112,3 @@ Salanti G, Del Giovane C, Chaimani A, Caldwell DM, Higgins JP. Evaluating the qu
 [doi: 10.1371/journal.pone.0099682](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099682)
 
 Spineli LM, Brignardello-Petersen R, Heen AF, Achille F, Brandt L, Guyatt GH, et al. Obtaining absolute effect estimates to facilitate shared decision making in the context of multiple-treatment comparisons. Abstracts of the Global Evidence Summit, Cape Town, South Africa. *Cochrane Database of Systematic Reviews* 2017;9(Suppl 1):18911.
-
-Walter SD. Choice of effect measure for epidemiological data. *J Clin Epidemiol* 2000;53(9):931-9. [doi: 10.1016/s0895-4356(00)00210-9](https://www.jclinepi.com/article/S0895-4356(00)00210-9/fulltext)
