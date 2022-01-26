@@ -14,6 +14,7 @@ We consider the direct and network meta-analysis odds ratio of comparisons among
 
 ``` r
 load("./data/chronically.discharging.ears.RData")
+head(ears)
 ```
 
 ## References
