@@ -67,7 +67,7 @@ absolute_effects(data_nma = discharging.ears[, c("nma_or", "nma_lower", "nma_upp
 #> |C            |A       |  -94|  -332|    65|
 #> |D            |A       | -239|  -494|   -10|
 #> |C            |B       |  138|   -20|   285|
-#> |C            |D       |  177|    87|   231|
+#> |C            |D       |  278|   117|   400|
 #> |D            |C       |  142|   -35|   273|
 #>
 #> $risk_diff_dir
@@ -80,7 +80,7 @@ absolute_effects(data_nma = discharging.ears[, c("nma_or", "nma_lower", "nma_upp
 #> |C            |A       |   NA|    NA|    NA|
 #> |D            |A       |   50|   -78|   125|
 #> |C            |B       |   94|   -54|   238|
-#> |C            |D       |  185|    97|   235|
+#> |C            |D       |  294|   133|   412|
 #> |D            |C       |  123|  -131|   300|
 #>
 #> $risk_diff_ind
@@ -93,7 +93,7 @@ absolute_effects(data_nma = discharging.ears[, c("nma_or", "nma_lower", "nma_upp
 #> |C            |A       |  -94|  -332|    65|
 #> |D            |A       |  112|    11|   154|
 #> |C            |B       | -380|  -417|  -268|
-#> |C            |D       |  269|   221|   291|
+#> |C            |D       |  786|   666|   806|
 #> |D            |C       |  162|    65|   245|
 ```
 
