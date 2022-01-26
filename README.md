@@ -56,47 +56,45 @@ absolute_effects(data_nma = ears[, c("nma_or", "nma_lower", "nma_upper")],
                  data_dir = ears[, c("direct_or", "direct_lower", "direct_upper")], 
                  abs_risk = absol_risk_new, 
                  compar = ears[, c("experimental", "control")])          
-```
 
-``` r
-$risk_diff_nma
-
-Table: NMA Absolute effects
-
-|experimental |control | mean| lower| upper|
-|:------------|:-------|----:|-----:|-----:|
-|B            |A       | -368|  -581|  -142|
-|C            |A       |  -94|  -332|    65|
-|D            |A       | -239|  -494|   -10|
-|C            |B       |  138|   -20|   285|
-|C            |D       |  177|    87|   231|
-|D            |C       |  142|   -35|   273|
-
-$risk_diff_dir
-
-Table: Direct absolute effects
-
-|experimental |control | mean| lower| upper|
-|:------------|:-------|----:|-----:|-----:|
-|B            |A       | -535|  -762|  -129|
-|C            |A       |   NA|    NA|    NA|
-|D            |A       |   50|   -78|   125|
-|C            |B       |   94|   -54|   238|
-|C            |D       |  185|    97|   235|
-|D            |C       |  123|  -131|   300|
-
-$risk_diff_ind
-
-Table: indirect absolute effects
-
-|experimental |control | mean| lower| upper|
-|:------------|:-------|----:|-----:|-----:|
-|B            |A       | -213|  -414|  -155|
-|C            |A       |  -94|  -332|    65|
-|D            |A       |  112|    11|   154|
-|C            |B       | -380|  -417|  -268|
-|C            |D       |  269|   221|   291|
-|D            |C       |  162|    65|   245|
+#> $risk_diff_nma
+#>
+#> Table: NMA Absolute effects
+#>
+#> |experimental |control | mean| lower| upper|
+#> |:------------|:-------|----:|-----:|-----:|
+#> |B            |A       | -368|  -581|  -142|
+#> |C            |A       |  -94|  -332|    65|
+#> |D            |A       | -239|  -494|   -10|
+#> |C            |B       |  138|   -20|   285|
+#> |C            |D       |  177|    87|   231|
+#> |D            |C       |  142|   -35|   273|
+#>
+#> $risk_diff_dir
+#>
+#> Table: Direct absolute effects
+#>
+#> |experimental |control | mean| lower| upper|
+#> |:------------|:-------|----:|-----:|-----:|
+#> |B            |A       | -535|  -762|  -129|
+#> |C            |A       |   NA|    NA|    NA|
+#> |D            |A       |   50|   -78|   125|
+#> |C            |B       |   94|   -54|   238|
+#> |C            |D       |  185|    97|   235|
+#> |D            |C       |  123|  -131|   300|
+#>
+#> $risk_diff_ind
+#> 
+#> Table: indirect absolute effects
+#>
+#> |experimental |control | mean| lower| upper|
+#> |:------------|:-------|----:|-----:|-----:|
+#> |B            |A       | -213|  -414|  -155|
+#> |C            |A       |  -94|  -332|    65|
+#> |D            |A       |  112|    11|   154|
+#> |C            |B       | -380|  -417|  -268|
+#> |C            |D       |  269|   221|   291|
+#> |D            |C       |  162|    65|   245|
 ```
 
 ## References
