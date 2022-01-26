@@ -45,7 +45,7 @@ Create a vector comprising the baseline risk and followed by the absolute risks 
 ``` r
 (absol_risk_new <- c(0.80, round(absol_risk[, 2]/1000, 2)))
 
-[1] 0.80 0.43 0.71 0.56
+#> 0.80 0.43 0.71 0.56
 ```
 
 Use the `absolute_effects` function to obtain the indirect, direct and network meta-analysis absolute effects. 
