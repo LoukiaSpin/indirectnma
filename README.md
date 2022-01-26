@@ -1,5 +1,5 @@
 # Indirect absolute effects 
-An R function to obtain indirect absolute effects based on the GRADE approach for absolute effects (Guyatt et al., 2013) and the transitive risks framework (Spineli et al., 2017).
+An R function to yield indirect absolute effects based on the GRADE approach for absolute effects (Guyatt et al., 2013) and the transitive risks framework (Spineli et al., 2017). After obtaining the absolute risks for all interventions of the network, the direct and network meta-analysis relative risks are obtained using the GRADE approach as proposed by Guyatt et al. (2013). Then, the corresponding absolute effects are a function of the absolute risks and the relative risks (see Appendix in Walter (2000)). Finally, the back-calculation approach is employed to obtain the indirect absolute effects (Dias et al., 2010).
 
 ## Installation
 Run the following code to install the development version:
@@ -14,6 +14,7 @@ We consider the direct and network meta-analysis odds ratio of comparisons among
 
 ``` r
 load("./data/chronically.discharging.ears.RData")
+
 #>  experimental control nma_or nma_lower nma_upper direct_or direct_lower direct_upper
 #>            B       A   0.19      0.07      0.48      0.09         0.01         0.51
 #>            C       A   0.60      0.22      1.60        NA           NA           NA
@@ -47,7 +48,7 @@ Create a vector comprising the baseline risk and followed by the absolute risks 
 #> 0.80 0.43 0.71 0.56
 ```
 
-Use the `absolute_effects` function to obtain the indirect, direct and network meta-analysis absolute effects. 
+Use the `absolute_effects` function to obtain the indirect, direct and network meta-analysis (NMA) absolute effects. 
 
 ``` r
 source("./R/indirect.absolute.effects_function.R")
@@ -104,3 +105,5 @@ Salanti G, Del Giovane C, Chaimani A, Caldwell DM, Higgins JP. Evaluating the qu
 [doi: 10.1371/journal.pone.0099682](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099682)
 
 Spineli LM, Brignardello-Petersen R, Heen AF, Achille F, Brandt L, Guyatt GH, et al. Obtaining absolute effect estimates to facilitate shared decision making in the context of multiple-treatment comparisons. Abstracts of the Global Evidence Summit, Cape Town, South Africa. *Cochrane Database of Systematic Reviews* 2017;9(Suppl 1):18911.
+
+Walter SD. Choice of effect measure for epidemiological data. *J Clin Epidemiol* 2000;53(9):931-9. [doi: 10.1016/s0895-4356(00)00210-9](https://www.jclinepi.com/article/S0895-4356(00)00210-9/fulltext)
