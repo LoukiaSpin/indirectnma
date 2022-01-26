@@ -61,13 +61,9 @@
 #'   that an intervention has the same absolute risk regardless of the 
 #'   control intervention in the comparison (Spineli et al., 2017). 
 #'   Both network meta-analysis and direct absolute effects have been obtained 
-#'   as a function of the \code{abs_risk} using a two-stag approach. 
-#'   Firstly, the relative risks for each comparison are obtained as a function 
-#'   of the corresponding \code{abs_risk} and odds ratio (via \code{data_nma} 
+#'   as a function of the \code{abs_risk} and odds ratio (via \code{data_nma} 
 #'   for the case of network meta-analysis and \code{data_dir} for the case of 
-#'   direct effects, respectively). Then, the corresponding absolute effects are
-#'   obtained as a function of the corresponding relative risks (from the first
-#'   stage) and the \code{abs_risk}.
+#'   direct effects, respectively). 
 #'   
 #'   Back-calculation is appropriate only when there are \bold{no} multi-arm 
 #'   trials in the network; otherwise, the independence between the indirect 
@@ -88,9 +84,8 @@
 #'   \code{data_nma} and \code{data_dir} should contain results in the odds 
 #'   ratio scale. We advocate using the odds ratio as an effect measure to 
 #'   perform pairwise and network meta-analysis for its desired mathematical 
-#'   properties. Then, the relative risk and risk difference (absolute effects) 
-#'   can be obtained as a function of \code{abs_risk} using the proper formulas 
-#'   as described in Walter (2000). 
+#'   properties. Then, the risk difference (absolute effects) can be obtained 
+#'   as a function of \code{abs_risk}. 
 #' 
 #'   For comparisons with no direct effect, the indirect effect size 
 #'   coincides with the network meta-analysis effect size.
@@ -118,11 +113,6 @@
 #' decision making in the context of multiple-treatment comparisons.
 #' Abstracts of the Global Evidence Summit, Cape Town, South Africa.
 #' \emph{Cochrane Database of Systematic Reviews} 2017;\bold{9}(Suppl 1):18911.
-#' 
-#' Walter SD. Choice of effect measure for epidemiological data. 
-#' \emph{J Clin Epidemiol} 2000;\bold{53}(9):931-9. 
-#' \doi{10.1016/s0895-4356(00)00210-9} 
-#'    
 
 absolute_effects <- function (data_nma,
                               data_dir, 
@@ -132,18 +122,16 @@ absolute_effects <- function (data_nma,
   # Prepare the vector with the baseline risk and absolute risks
   prepare <- data.frame(unique(compar[, 2]), as.vector(table(compar[, 2])))
   colnames(prepare) <- c("name", "freq")
-  absolute_risks <- rep(abs_risk, prepare[, 2])
+  absolute_risk <- rep(abs_risk, prepare[, 2])
   
-  #' Network meta-analysis results 
-  #' Obtain relative risks (rr_nma) and absolute effects (rd_nma)
-  rr_nma <- data_nma / (1 - (1 - data_nma) * absolute_risks)
-  rd_nma <- (rr_nma - 1) * absolute_risks
+  # Network meta-analysis results 
+  rd_nma <- (((1 - absolute_risk) * (data_nma - 1)) / 
+               (1 + absolute_risk * (data_nma - 1))) * absolute_risk
   rd_nma_var <- ((rd_nma[, 3] - rd_nma[, 2]) / 3.92)^2
   
-  #' Pairwise meta-analysis results
-  #' Obtain relative risks (rr_dir) and absolute effects (rd_dir)
-  rr_dir <- data_dir / (1 - (1 - data_dir) * absolute_risks)
-  rd_dir <- (rr_dir - 1) * absolute_risks
+  # Pairwise meta-analysis results
+  rd_dir <- (((1 - absolute_risk) * (data_dir - 1)) / 
+               (1 + absolute_risk * (data_dir - 1))) * absolute_risk
   rd_dir_var <- ((rd_dir[, 3] - rd_dir[, 2]) / 3.92)^2
   
   # Apply back-calculation to obtain indirect absolute effects
