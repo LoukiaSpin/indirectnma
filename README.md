@@ -10,7 +10,7 @@ Run the following code to install the development version:
 
 ``` r
 install.packages("devtools")
-devtools::install_github("LoukiaSpin/Indirect-absolute-effects")
+devtools::install_github("LoukiaSpin/indirectnma")
 ```
 
 ## Example
