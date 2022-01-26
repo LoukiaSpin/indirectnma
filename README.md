@@ -15,6 +15,7 @@ We consider the direct and network meta-analysis odds ratio of comparisons among
 ``` r
 load("./data/chronically.discharging.ears.RData")
 
+#> ears
 #>  experimental control nma_or nma_lower nma_upper direct_or direct_lower direct_upper
 #>            B       A   0.19      0.07      0.48      0.09         0.01         0.51
 #>            C       A   0.60      0.22      1.60        NA           NA           NA
