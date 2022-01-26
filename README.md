@@ -10,7 +10,7 @@ devtools::install_github("LoukiaSpin/Indirect-absolute-effects")
 ```
 
 ## Example
-We consider the direct and network meta-analysis odds ratio of the comparisons of topical antibiotics without steroids for chronically discharging ears as reported in Salanti et al. (2014) (see Table 1 and Figure 4, respectively)
+We consider the direct and network meta-analysis odds ratio of comparisons among topical antibiotics without steroids for chronically discharging ears as reported in Salanti et al. (2014) (see Table 1 and Figure 4, respectively).
 
 ## References
 Guyatt GH, Oxman AD, Santesso N, et al. GRADE guidelines: 12. Preparing Summary of Findings tables - Binary outcomes. *J Clin Epidemiol* 2013;66(2):158-172. doi:10.1016/j.jclinepi.2012.01.012
