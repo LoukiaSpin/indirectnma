@@ -28,12 +28,19 @@ Use the `absolute_risk` function to calculate the unique absolute risks for the 
 ``` r
 source("./R/obtain.absolute.risks_function.R")
 
-abs_risk0 <- absolute_risk(data = ears[1:3, c("experimental", "nma_or", "nma_lower", "nma_upper")], 
-                           ref = "A", 
-                           base_risk = 0.80, 
-                           measure = "OR", 
-                           log = FALSE)
+absol_risk <- absolute_risk(data = ears[1:3, c("experimental", "nma_or", "nma_lower", "nma_upper")], 
+                            ref = "A", 
+                            base_risk = 0.80, 
+                            measure = "OR", 
+                            log = FALSE)
 ```
+
+Create a vector comprising the baseline risk and the absolute risks as thex appear in `absol_risk`. Note that `absol_risk` returns the absolute risks per 1,000 participants.
+
+``` r
+absol_risk_new <- c(0.80, round(absol_risk[, 2]/1000, 2))
+```
+
 ## References
 Guyatt GH, Oxman AD, Santesso N, Helfand M, Vist G, Kunz R, et al. GRADE guidelines: 12. Preparing summary of findings tables-binary outcomes. *J Clin Epidemiol* 2013;66(2):158-72. [doi: 10.1016/j.jclinepi.2012.01.012](https://www.jclinepi.com/article/S0895-4356(12)00032-7/fulltext)
 
