@@ -35,10 +35,19 @@ absol_risk <- absolute_risk(data = ears[1:3, c("experimental", "nma_or", "nma_lo
                             log = FALSE)
 ```
 
-Create a vector comprising the baseline risk and the absolute risks as thex appear in `absol_risk`. Note that `absol_risk` returns the absolute risks per 1,000 participants.
+Create a vector comprising the baseline risk and followed by the absolute risks as they appear in `absol_risk`. Note that `absol_risk` returns the absolute risks per 1,000 participants.
 
 ``` r
 absol_risk_new <- c(0.80, round(absol_risk[, 2]/1000, 2))
+```
+
+Use the `absolute_effects` function to obtain the indirect, direct and network meta-analysis absolute effects. 
+
+``` r
+absolute_effects(data_nma = ears[, c("nma_or", "nma_lower", "nma_upper")], 
+                 data_dir = ears[, c("direct_or", "direct_lower", "direct_upper")], 
+                 abs_risk = absol_risk_new, 
+                 compar = ears[, c("experimenta", "control")])
 ```
 
 ## References
