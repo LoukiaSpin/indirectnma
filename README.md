@@ -13,7 +13,7 @@ devtools::install_github("LoukiaSpin/Indirect-absolute-effects")
 We consider the direct and network meta-analysis odds ratio of comparisons among topical antibiotics without steroids for chronically discharging ears as reported in Salanti et al. (2014) (see Table 1 and Figure 4, respectively).
 
 ``` r
-data(ears.RData)
+ears
 ```
 
 ## References
