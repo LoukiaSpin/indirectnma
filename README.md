@@ -23,7 +23,7 @@ load("./data/chronically.discharging.ears.RData")
 #>            D       C   1.85      0.87      3.92      1.69         0.59         4.83
 ```
 
-Use the `absolute_risk` function to calculate the unique absolute risks for the interventions B, C, and D while assuming a baseline risk of 0.80 for intervention A.
+Use the `absolute_risk` function to calculate the unique absolute risks for the interventions B, C, and D while assuming a baseline risk of 0.80 for intervention A.  The absolute risks are per 1,000 participants.
 
 ``` r
 source("./R/obtain.absolute.risks_function.R")
@@ -40,7 +40,7 @@ absol_risk
 #>        D    561       306       790
 ```
 
-Create a vector comprising the baseline risk and followed by the absolute risks as they appear in `absol_risk`. Note that `absol_risk` returns the absolute risks per 1,000 participants.
+Create a vector comprising the baseline risk and followed by the absolute risks as they appear in `absol_risk`.
 
 ``` r
 absol_risk_new <- c(0.80, round(absol_risk[, 2]/1000, 2))
