@@ -47,7 +47,7 @@ Use the `absolute_effects` function to obtain the indirect, direct and network m
 absolute_effects(data_nma = ears[, c("nma_or", "nma_lower", "nma_upper")], 
                  data_dir = ears[, c("direct_or", "direct_lower", "direct_upper")], 
                  abs_risk = absol_risk_new, 
-                 compar = ears[, c("experimenta", "control")])
+                 compar = ears[, c("experimental", "control")])
 ```
 
 ## References
