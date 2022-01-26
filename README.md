@@ -2,7 +2,8 @@
 An R function to yield indirect absolute effects using the **GRADE approach** for absolute effects (Guyatt et al., 2013), the **transitive risks** framework (Spineli et al., 2017), and the **back-calculation method** (Dias et al., 2010). 
 
 Under the GRADE approach for absolute effects (Guyatt et al., 2013), and the transitive risks framework (Spineli et al., 2017), the absolute risks for all interventions of the network are obtained as follows:
-$$RR = \frac{p_{A}}{p_{B}}$$
+
+<div style="text-align: center">$$RR = \frac{p_{A}}{p_{B}}$$</div>
 
 
 the direct and network meta-analysis relative risks are obtained using the GRADE approach as proposed by Guyatt et al. (2013). Then, the corresponding absolute effects are a function of the absolute risks and the relative risks (see Appendix in Walter (2000)). Finally, the back-calculation approach is employed to obtain the indirect absolute effects (Dias et al., 2010).
