@@ -1,7 +1,7 @@
 # Indirect absolute effects 
 An R function to yield indirect absolute effects using the **GRADE approach** for binary outcomes (Guyatt et al., 2013), the **transitive risks** framework (Spineli et al., 2017), and the **back-calculation method** (Dias et al., 2010). This is a three-stage approach:
 
-- firstly, the absolute risks for all interventions of the network are obtained using the GRADE approach for binary outcomes (Guyatt et al., 2013), and the transitive risks framework (Spineli et al., 2017);
+- firstly, the absolute risks for all interventions of the network are obtained using the GRADE approach for binary outcomes (Guyatt et al., 2013), and the transitive risks framework (Spineli et al., 2017). The  transitive risks framework advocates that an intervention has the same absolute risk regardless of the control intervention in the comparisons of a network. After selecting a proper baseline risk for the reference intervention of the network, the absolute risks of the non-reference interventions are obtained as a function of the baseline risk and the network meta-analysis effects size of comparisons with the reference intervention;
 - secondly, the baseline and absolute risks from the first stage are incorporated in the formula to obtain the direct and network meta-analysis absolute effects (see Guyatt et al. 2013);
 - finally, the back-calculation approach is employed to obtain the indirect absolute effects (Dias et al., 2010).
 
