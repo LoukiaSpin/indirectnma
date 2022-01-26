@@ -17,20 +17,20 @@ devtools::install_github("LoukiaSpin/indirectnma")
 We consider the direct and network meta-analysis odds ratio of comparisons among topical antibiotics without steroids for chronically discharging ears as reported in Salanti et al. (2014) (see Table 1 and Figure 4, respectively).
 
 ``` r
-ears <- chronically.discharging.ears
+discharging.ears
 #>  experimental control nma_or nma_lower nma_upper direct_or direct_lower direct_upper
 #>            B       A   0.19      0.07      0.48      0.09         0.01         0.51
 #>            C       A   0.60      0.22      1.60        NA           NA           NA
 #>            D       A   0.32      0.11      0.94      1.42         0.65         3.09
 #>            C       B   1.74      0.92      3.32      1.46         0.80         2.67
-#>            C       D   3.22      1.60      6.47      3.47         1.71         7.07
+#>            D       B   3.22      1.60      6.47      3.47         1.71         7.07
 #>            D       C   1.85      0.87      3.92      1.69         0.59         4.83
 ```
 
 Use the `absolute_risk` function to calculate the unique absolute risks for the interventions B, C, and D while assuming a baseline risk of 0.80 for intervention A.  The absolute risks are per 1,000 participants.
 
 ``` r
-absol_risk <- absolute_risk(data = ears[1:3, c("experimental", "nma_or", "nma_lower", "nma_upper")], 
+absol_risk <- absolute_risk(data = discharging.ears[1:3, c("experimental", "nma_or", "nma_lower", "nma_upper")], 
                             ref = "A", 
                             base_risk = 0.80, 
                             measure = "OR", 
@@ -52,10 +52,10 @@ Create a vector comprising the baseline risk, followed by the absolute risks as 
 Use the `absolute_effects` function to obtain the indirect, direct and network meta-analysis (NMA) absolute effects. 
 
 ``` r
-absolute_effects(data_nma = ears[, c("nma_or", "nma_lower", "nma_upper")], 
-                 data_dir = ears[, c("direct_or", "direct_lower", "direct_upper")], 
+absolute_effects(data_nma = discharging.ears[, c("nma_or", "nma_lower", "nma_upper")], 
+                 data_dir = discharging.ears[, c("direct_or", "direct_lower", "direct_upper")], 
                  abs_risk = absol_risk_new, 
-                 compar = ears[, c("experimental", "control")])          
+                 compar = discharging.ears[, c("experimental", "control")])          
 
 #> $risk_diff_nma
 #>
