@@ -43,8 +43,8 @@ absol_risk
 Create a vector comprising the baseline risk and followed by the absolute risks as they appear in `absol_risk`.
 
 ``` r
-absol_risk_new <- c(0.80, round(absol_risk[, 2]/1000, 2))
-absol_risk_new 
+(absol_risk_new <- c(0.80, round(absol_risk[, 2]/1000, 2)))
+
 [1] 0.80 0.43 0.71 0.56
 ```
 
