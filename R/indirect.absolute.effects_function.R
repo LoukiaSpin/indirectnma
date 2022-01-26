@@ -122,7 +122,7 @@ absolute_effects <- function (data_nma,
   # Prepare the vector with the baseline risk and absolute risks
   prepare <- data.frame(unique(compar[, 2]), as.vector(table(compar[, 2])))
   colnames(prepare) <- c("name", "freq")
-  absolute_risk <- rep(abs_risk, prepare[, 2])
+  absolute_risk <- rep(abs_risk[-length(unique(compar[, 2]))], prepare[, 2])
   
   # Network meta-analysis results 
   rd_nma <- (((1 - absolute_risk) * (data_nma - 1)) / 
