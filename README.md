@@ -99,6 +99,8 @@ absolute_effects(data_nma = ears[, c("nma_or", "nma_lower", "nma_upper")],
 ```
 
 ## References
+Dias S, Welton NJ, Caldwell DM, Ades AE. Checking consistency in mixed treatment comparison meta-analysis. *Stat Med* 2010;29(7-8):932-44. [doi: 10.1002/sim.3767](https://onlinelibrary.wiley.com/doi/10.1002/sim.3767)
+
 Guyatt GH, Oxman AD, Santesso N, Helfand M, Vist G, Kunz R, et al. GRADE guidelines: 12. Preparing summary of findings tables-binary outcomes. *J Clin Epidemiol* 2013;66(2):158-72. [doi: 10.1016/j.jclinepi.2012.01.012](https://www.jclinepi.com/article/S0895-4356(12)00032-7/fulltext)
 
 Salanti G, Del Giovane C, Chaimani A, Caldwell DM, Higgins JP. Evaluating the quality of evidence from a network meta-analysis. *PLoS One* 2014;9(7):e99682. 
