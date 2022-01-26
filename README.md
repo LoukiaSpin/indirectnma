@@ -25,6 +25,15 @@ load("./data/chronically.discharging.ears.RData")
 
 Use the `absolute_risk` function to calculate the unique absolute risks for the interventions B, C, and D while assuming a baseline risk of 0.80 for intervention A.
 
+``` r
+source("./R/obtain.absolute.risks_function.R")
+
+abs_risk0 <- absolute_risk(data = ears[1:3, c(1, 3:5)], 
+                           ref = "A", 
+                           base_risk = 0.80, 
+                           measure = "OR", 
+                           log = FALSE)
+```
 ## References
 Guyatt GH, Oxman AD, Santesso N, Helfand M, Vist G, Kunz R, et al. GRADE guidelines: 12. Preparing summary of findings tables-binary outcomes. *J Clin Epidemiol* 2013;66(2):158-72. [doi: 10.1016/j.jclinepi.2012.01.012](https://www.jclinepi.com/article/S0895-4356(12)00032-7/fulltext)
 
