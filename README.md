@@ -17,7 +17,7 @@ devtools::install_github("LoukiaSpin/indirectnma")
 We consider the direct and network meta-analysis odds ratio of comparisons among topical antibiotics without steroids for chronically discharging ears as reported in Salanti et al. (2014) (see Table 1 and Figure 4, respectively).
 
 ``` r
-chronically.discharging.ears
+ears <- chronically.discharging.ears
 #>  experimental control nma_or nma_lower nma_upper direct_or direct_lower direct_upper
 #>            B       A   0.19      0.07      0.48      0.09         0.01         0.51
 #>            C       A   0.60      0.22      1.60        NA           NA           NA
@@ -30,8 +30,6 @@ chronically.discharging.ears
 Use the `absolute_risk` function to calculate the unique absolute risks for the interventions B, C, and D while assuming a baseline risk of 0.80 for intervention A.  The absolute risks are per 1,000 participants.
 
 ``` r
-source("./R/obtain.absolute.risks_function.R")
-
 absol_risk <- absolute_risk(data = ears[1:3, c("experimental", "nma_or", "nma_lower", "nma_upper")], 
                             ref = "A", 
                             base_risk = 0.80, 
@@ -54,8 +52,6 @@ Create a vector comprising the baseline risk, followed by the absolute risks as 
 Use the `absolute_effects` function to obtain the indirect, direct and network meta-analysis (NMA) absolute effects. 
 
 ``` r
-source("./R/indirect.absolute.effects_function.R")
-
 absolute_effects(data_nma = ears[, c("nma_or", "nma_lower", "nma_upper")], 
                  data_dir = ears[, c("direct_or", "direct_lower", "direct_upper")], 
                  abs_risk = absol_risk_new, 
