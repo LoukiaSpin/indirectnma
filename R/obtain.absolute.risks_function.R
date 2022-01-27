@@ -89,7 +89,7 @@ absolute_risk <- function (data, ref, base_risk, measure, log) {
   }
   
   absol_risk <- data.frame(data[, 1], absol_risk0)
-  colnames(absol_risk) <- c(paste("versus", ref), names(absol_risk0))
+  colnames(absol_risk) <- c(paste("versus", ref), c("risk", "lower", "upper"))
   
   writexl::write_xlsx(absol_risk, paste0("Table absolute risks", ".xlsx"))
   
