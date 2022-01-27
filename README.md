@@ -36,10 +36,10 @@ absol_risk <- absolute_risk(data = discharging.ears[1:3, c("experimental", "nma_
                             measure = "OR", 
                             log = FALSE)
 absol_risk
-#> versus A nma_or nma_lower nma_upper
-#>        B    432       219       658
-#>        C    706       468       865
-#>        D    561       306       790
+#> versus A   risk  lower   upper
+#>        B    432    219     658
+#>        C    706    468     865
+#>        D    561    306     790
 ```
 
 Create a vector comprising the baseline risk, followed by the absolute risks as they appear in the second column of `absol_risk`.
